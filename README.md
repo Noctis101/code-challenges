@@ -1,7 +1,7 @@
 # Code Challenges
 This is a repository for accepting submissions for coding challenges.
 
-# Challenge 1 - 10/04/2025
+## Challenge #1 - 10/04/2025
 Consider this scenario:
 
 A wellness centre has only one psychiatrist. There is an array of patients[i] = [arrival[i], time[i]]
