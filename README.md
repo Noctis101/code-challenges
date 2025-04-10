@@ -40,5 +40,5 @@ Print a single integer, representing the rounded average waiting time.
 
 ## Constraints
 
-1 <= N <= 10^5
-1 <= arrival[i], time[i] <= 10^9
+- 1 <= N <= 10^5
+- 1 <= arrival[i], time[i] <= 10^9
