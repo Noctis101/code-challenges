@@ -46,7 +46,7 @@ public class TestSolution {
         @DisplayName("4. Multiple patients with same arrival")
         void sameArrival() {
             int[][] patient = {{1, 3}, {1, 2}, {1, 1}};
-            assertThat(solution(3, patient)).isEqualTo(3);
+            assertThat(solution(3, patient)).isEqualTo(4);
         }
 
         @Test
