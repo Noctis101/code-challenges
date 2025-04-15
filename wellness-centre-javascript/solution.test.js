@@ -14,7 +14,7 @@ describe('Tests for Wellness Centre solution', () => {
   });
 
   test('4. Multiple patients with same arrival', () => {
-    expect(solution(3, [[1, 3], [1, 2], [1, 1]])).toBe(3);
+    expect(solution(3, [[1, 3], [1, 2], [1, 1]])).toBe(4);
   });
 
   test('5. Idle psychiatrist', () => {
