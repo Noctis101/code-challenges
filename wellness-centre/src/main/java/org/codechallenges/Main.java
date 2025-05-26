@@ -1,6 +1,5 @@
 package org.codechallenges;
 
-import java.util.Arrays;
 /**
  * Code Challenge - Wellness Centre Patient Walk-in's
  * <p>
