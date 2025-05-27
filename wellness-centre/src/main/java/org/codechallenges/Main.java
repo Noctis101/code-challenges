@@ -7,7 +7,7 @@ package org.codechallenges;
  */
 public class Main {
 
-    public static int solution(int numberOfPatients, int[][] patients) {
+    public static int solution(int N, int[][] patient) {
         return 0;
     }
 
