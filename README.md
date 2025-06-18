@@ -1,6 +1,3 @@
-# Code Challenges
-This is a repository for accepting submissions for coding challenges.
-
 ## Challenge #3 — Bug Fixing Challenge
 Below are three self-contained bug-fix scenarios. You are only required to solve one.
 
