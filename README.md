@@ -1,37 +1,83 @@
-## Challenge #3 — Bug Fixing Challenge
-Below are three self-contained bug-fix scenarios. You are only required to solve one.
+## Challenge #4 — Problem Solving Challenge
+Below is a problem solving scenario. You may solve it in any of the following languages:
+
+- TypeScript/JavaScript
+- Java
+- Python
+- C#
 
 ---
 
-### Java - Strategy Pattern Not Selecting the Expected Implementation
+# Seat Reservation System Challenge
 
-**Context:** A service attempts to dynamically choose and execute a write strategy for different data sinks (e.g., MySQL, CSV). Depending on input, it selects a specific writer implementation and invokes it.
+## Scenario
 
-**Observed Behaviour:** In certain cases, the wrong strategy is applied, or an exception occurs during strategy resolution. This results in incorrect output or runtime errors.
+A movie theatre has **N seats**, numbered from **1 to N**. You're tasked with implementing a **seat reservation system** that performs **K operations**, each of which:
 
-**Task:** Analyze why the correct strategy is not being selected or invoked. Refactor or fix the issue while maintaining the ability to support multiple strategies.
+1. Reserves the **smallest-numbered unreserved seat**, or
+2. Cancels a reservation for a specific seat.
 
----
-
-### TypeScript - Autosave Behavior in React Component Exhibits Unexpected Console Logs
-
-**Context:** A React form component is built with an autosave mechanism that logs or saves input at a fixed interval. The autosave depends on the current input value entered by the user.
-
-**Observed Behaviour:** After using the form for a while or navigating away and back, console logs begin to multiply or display outdated input. In some cases, stopping and restarting the app resolves the issue temporarily.
-
-**Task:** Investigate why the autosave behavior becomes inconsistent over time. Identify the issue and provide a solution that ensures correct and efficient autosave behavior without side effects.
+After each reservation (not cancellation), the system must return the **seat number** that was reserved.
 
 ---
 
-### Python - RAM Availability Check Returns Inconsistent Results
+## Objective
 
-**Context:** A function determines if a system has enough available RAM (in MB) to proceed with a task. The logic uses data from a system resource library to evaluate whether memory requirements are met.
-
-**Observed Behaviour:** On some machines, the check passes when it should fail, or fails when it should pass. Results appear inconsistent between different operating systems or environments.
-
-**Task:** Evaluate the memory checking logic and determine why inconsistencies occur. Adjust the function to produce consistent, platform-resilient results.
+Implement a function that processes the operations efficiently and returns the list of reserved seat numbers in the order they were made.
 
 ---
+
+## Input Format
+
+* `N` → Integer: Number of seats (1-indexed, from 1 to N)
+* `K` → Integer: Number of operations
+* `seat` → Integer array of size K
+
+    * If `seat[i] == 0`, reserve the **smallest available** seat
+    * If `seat[i] > 0`, cancel the reservation for seat number `seat[i]`
+
+### Example:
+
+```
+N = 5
+K = 6
+seat = [0, 0, 0, 2, 1, 0]
+```
+
+### Output:
+
+```
+[1, 2, 3, 1]
+```
+---
+
+## Output Format
+
+Print an array containing the reserved seat numbers in order.
+Only include seat numbers that were actually reserved (i.e., ignore cancellations).
+
+---
+
+## Constraints
+
+* `1 < N < 10^5`
+* `1 < K < 10^5`
+* `0 <= seat[i] <= N`
+* Each reservation guarantees an unreserved seat is available.
+* Each cancellation guarantees that the seat was reserved.
+
+---
+
+## Example Function Signature
+
+In Java:
+
+```
+public static List<Integer> seatReservation(int N, int K, int[] seat)
+```
+
+---
+
 
 ## Submission Instructions
-Please see ```challenge-3/bug-fixing-submissions/README.md```
+Please see ```challenge-4/movie-theatre-submissions/README.md```
