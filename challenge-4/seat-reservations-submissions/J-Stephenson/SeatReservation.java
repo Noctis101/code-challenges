@@ -16,8 +16,7 @@ public class SeatReservation {
                     res.add(cancellations.first() < seatCounter ? cancellations.pollFirst() : seatCounter);
                 }
                 else {
-                    res.add(seatCounter);
-                    seatCounter++;
+                    res.add(seatCounter++);
                 }
             }
             else {
