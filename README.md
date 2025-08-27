@@ -80,4 +80,4 @@ public static List<Integer> seatReservation(int N, int K, int[] seat)
 
 
 ## Submission Instructions
-Please see ```challenge-4/movie-theatre-submissions/README.md```
+Please see ```challenge-4/seat-reservations-submissions/README.md```
